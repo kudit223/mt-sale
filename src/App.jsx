@@ -39,11 +39,17 @@ function App() {
         <Typography variant='h3' align='center'>
           Our Amazing Course
         </Typography>
-        <div style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '30px' }}>
-          {cardDetails.map((card) => <CourseCard {...card} />)}
+        <div style={{ display: 'flex',gap:'16px' ,justifyContent: 'center', marginTop: '30px' ,flexWrap:'wrap'}}>
+          {cardDetails.map((card) => <CourseCard key={crypto.randomUUID()} {...card} />)}
         </div>
 
       </div>
+
+      <footer >
+        <Typography align='center' variant='h5' sx={{}}>
+          Made by:Udit Kumar
+        </Typography>
+      </footer>
 
     </>
   )
